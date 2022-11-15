@@ -1,0 +1,37 @@
+Languages = [{
+    "name": "English",
+    "code": "en"
+}, {
+    "name": "Hindi",
+    "code": "hi"
+}, {
+    "name": "Bengali",
+    "code": "bn"
+}, {
+    "name": "Marathi",
+    "code": "mr"
+}, {
+    "name": "Telugu",
+    "code": "te"
+}, {
+    "name": "Tamil",
+    "code": "ta"
+}, {
+    "name": "Gujarati",
+    "code": "gu"
+}, {
+    "name": "Urdu",
+    "code": "ur"
+}, {
+    "name": "Kannada",
+    "code": "kn"
+}, {
+    "name": "Malayalam",
+    "code": "ml"
+}, {
+    "name": "Punjabi",
+    "code": "pa"
+}, {
+    "name": "Assamese",
+    "code": "as"
+}]

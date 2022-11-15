@@ -1,0 +1,73 @@
+<!Doctype html>
+
+<head>
+    <title>Realtime Speech to Text</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'styles.css') }}">
+    <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./icons/favicon.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="left">
+
+            <div id="titleimg">
+                <img id="img" src="{{ url_for('static', filename= 'icons/task.png') }}" alt="">
+            </div>
+
+            <div id="input">
+
+                <div id="selection">
+                    <h2 id="hlang">Select Language:</h2>
+                    <select class="langs" id="iplangs"></select>
+                </div>
+
+                <div>
+                    <button class="btn" id="pick">Use Audio File</button>
+                    <button class="btn" id="action">Start Listening</button>
+                </div>
+
+                <div id="selection">
+                    <select class="langs" id="oplangs"></select>
+                    <button class="btn" id="translate">Translate</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="right">
+
+            <div id="titletxt">
+                <h1 id="h1">Realtime Speech to Text</h1>
+                <h2 id="h2">BY D-CODERS</h2>
+            </div>
+
+            <div id="output">
+
+                <div id="controls">
+                    <img id="undo" title="undo" src="{{ url_for('static', filename= 'icons/undo.png') }}">
+                    <img id="redo" title="redo" src="{{ url_for('static', filename= 'icons/redo.png') }}">
+                    <button class="btn" id="clear">Clear</button>
+                    <button class="btn" id="listen">Listen</button>
+                </div>
+
+                <textarea id="txtarea" placeholder="Output Text"></textarea>
+
+                <input type="text" id="name" placeholder="File Name">
+                <button class="btn" id="save">Save</button>
+                <h3 id="alert"></h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename= 'langs.js') }}"></script>
+    <script src="{{ url_for('static', filename= 'index.js') }}"></script>
+    </div>
+</body>
