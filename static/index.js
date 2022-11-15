@@ -18,8 +18,6 @@ var host = window.location.href
     // var host = "http://127.0.0.1:5000"
     // window.jsPDF = window.jspdf.jsPDF
 
-fetch(host, { method: "GET" })
-
 var ipevent = new Event('input')
 
 var speech = new webkitSpeechRecognition()
@@ -156,7 +154,7 @@ function getTranslation(text, l1, l2) {
     data["To"] = l2
 
     translate.innerText = "Translating..."
-    fetch(host + "/translate", {
+    fetch(host + "translate", {
         method: "POST",
         body: JSON.stringify(data)
     }).then(res => {
@@ -181,7 +179,7 @@ function getTranscription(file, lang) {
     var data = new FormData();
     data.append('file', file, lang);
     pfile.innerText = "Analysing Audio..."
-    fetch(host + "/transcript", {
+    fetch(host + "transcript", {
         method: "POST",
         body: data
     }).then(res => {
@@ -205,7 +203,7 @@ function getAudio(text, lang) {
     data["Text"] = text
     data["Lang"] = lang
 
-    fetch(host + "/listen", {
+    fetch(host + "listen", {
         method: "POST",
         body: JSON.stringify(data)
     }).then(res => {
